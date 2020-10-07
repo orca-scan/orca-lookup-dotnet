@@ -92,7 +92,7 @@ This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-c
 
 ## Reporting Bugs
 
-Please raise bugs using the [issue tracker](https://github.com/orca-scan/orca-lookup-dotnet/issues) and, if possible, please provide enough information to allow the bug to be reproduced. You will be notified via GitHub once we resolve the issue.
+Please raise bugs using the [issue tracker](https://github.com/orca-scan/orca-lookup-dotnet/issues), please provide enough information to allow the bug to be reproduced. You will be notified via GitHub once we resolve the issue.
 
 ## Contributing
 
