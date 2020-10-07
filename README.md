@@ -5,16 +5,24 @@ Quick example of how to respond to an [Orca Lookup URL](https://orcascan.com/doc
 ## Install
 
 ```bash
+# download this example code
 git clone git@github.com:orca-scan/orca-lookup-dotnet.git
+
+# go into the new directory
 cd orca-lookup-dotnet
+
+# install dependencies
 dotnet restore
 ```
 
 ## Run
 
 ```bash
+# start the project
 dotnet run
 ```
+
+Open your browser at [http://localhost:5001](http://localhost:5001) to interact with the controller.
 
 ## Troubleshooting
 
