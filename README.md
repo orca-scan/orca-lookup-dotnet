@@ -15,3 +15,10 @@ dotnet restore
 ```bash
 dotnet run
 ```
+
+## Troubleshooting
+
+**The current .NET SDK does not support targeting .NET Core 3.1**
+
+This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1), upgrade and try again.
+
