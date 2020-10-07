@@ -28,6 +28,8 @@ dotnet restore
 dotnet run
 ```
 
+Open your browser at [http://localhost:5001](http://localhost:5001) to interact with the controller.
+
 ## How it works
 
 [OrcaLookupController](/Controllers/OrcaLookupController.cs) is an example of how to process an incoming request:
@@ -81,8 +83,6 @@ public class OrcaLookupModel {
     public int Year { get; set; }
 }
 ```
-
-Open your browser at [http://localhost:5001](http://localhost:5001) to interact with the controller.
 
 ## Troubleshooting
 
