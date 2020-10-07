@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json.Serialization;
+using OrcaLookupDotNet.Models;
 
 namespace OrcaLookupDotNet.Controllers
 {
@@ -8,29 +9,6 @@ namespace OrcaLookupDotNet.Controllers
     [Produces("application/json")]
     public class OrcaLookupController : ControllerBase
     {
-        // Model that mimics the structure of an Orca Sheet
-        // This will be serialises as JSON
-        // (JSON property names must match orca sheet column names!)
-        private class OrcaLookupResult {
-
-            [JsonPropertyName("VIN")]
-            public string Vin { get; set; }
-
-            [JsonPropertyName("Make")]
-            public string Make { get; set; }
-
-            [JsonPropertyName("Model")]
-            public string Model { get; set; }
-
-            [JsonPropertyName("Manufacturer Name")]
-            public string ManufacturerName { get; set; }
-
-            [JsonPropertyName("Vehicle Type")]
-            public string VehicleType { get; set; }
-
-            [JsonPropertyName("Year")]
-            public int Year { get; set; }
-        }
 
         [HttpGet]
         public IActionResult Get()
@@ -41,7 +19,7 @@ namespace OrcaLookupDotNet.Controllers
             // TODO: query a database or API to retrieve some data
             
             // hydrate model with data from data source
-            var result = new OrcaLookupResult(){
+            var result = new OrcaLookupModel(){
                 Vin = "4S3BMHB68B3286050",
                 Make = "SUBARU",
                 Model = "SUBARU",

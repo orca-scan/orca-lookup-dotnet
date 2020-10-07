@@ -23,7 +23,7 @@ dotnet restore
 
 ## Usage
 
-For an example of how to do this, see [OrcaLookupController.cs](/Controllers/OrcaLookupController.cs)
+[OrcaLookupController](/Controllers/OrcaLookupController.cs) is an example of how to process an incoming request:
 
 ```csharp
 [HttpGet]
@@ -35,7 +35,7 @@ public IActionResult Get()
     // TODO: query a database or API to retrieve some data
 
     // hydrate model with data from data source
-    var result = new OrcaLookupResult(){
+    var result = new OrcaLookupModel(){
         Vin = "4S3BMHB68B3286050",
         Make = "SUBARU",
         Model = "SUBARU",
@@ -49,11 +49,11 @@ public IActionResult Get()
 }
 ```
 
-[OrcaLookupResult](/Controllers/OrcaLookupController.cs) is an example model of how to return data to Orca Scan. Orca expects the data in JSON format such that the JSON property names match the Orca column names.
+[OrcaLookupModel](/Models/OrcaLookupModel.cs) is an example model of how to respond to a lookup request:
 
 ```csharp
 // IMPORTANT: Model must mimics the structure of an Orca Sheet when serialised
-private class OrcaLookupResult {
+public class OrcaLookupModel {
 
     [JsonPropertyName("VIN")]
     public string Vin { get; set; }
