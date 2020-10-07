@@ -51,7 +51,7 @@ public IActionResult Get()
         Year = 1992
     };
 
-    // return data to Orca as a JSON object (JSON property names must match orca sheet column names!)
+    // return data to Orca as a JSON object
     return new JsonResult(result);
 }
 ```
@@ -90,3 +90,24 @@ Open your browser at [http://localhost:5001](http://localhost:5001) to interact 
 
 This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1), upgrade and try again.
 
+## Reporting Bugs
+
+Please raise bugs using the [issue tracker](https://github.com/orca-scan/orca-lookup-dotnet/issues) and, if possible, please provide enough information to allow the bug to be reproduced. You will be notified via GitHub once we resolve the issue.
+
+## Contributing
+
+Feel free to contribute, either by [raising an issue](https://github.com/orca-scan/orca-lookup-dotnet/issues) or:
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+## History
+
+For change-log, check [releases](https://github.com/orca-scan/orca-lookup-dotnet/releases).
+
+## License
+
+Licensed under [MIT License](LICENSE) &copy; [Orca Scan](https://orcascan.com)
