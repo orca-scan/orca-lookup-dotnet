@@ -56,7 +56,7 @@ public IActionResult Get()
 }
 ```
 
-[OrcaLookupModel](/Models/OrcaLookupModel.cs) is an example model of how to respond to a lookup request:
+[OrcaLookupModel](/Models/OrcaLookupModel.cs) is an example model used to respond to a lookup request:
 
 ```csharp
 // IMPORTANT: JSON property names must match Orca sheet column names when serialised
