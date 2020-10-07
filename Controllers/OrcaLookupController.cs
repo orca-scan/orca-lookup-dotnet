@@ -38,7 +38,7 @@ namespace OrcaLookupDotNet.Controllers
             // get the incoming barcode sent from Orca Scan (scanned by a user)
             string barcode = HttpContext.Request.Query["barcode"].ToString();
 
-            // TODO: query a database or API to retrive some data
+            // TODO: query a database or API to retrieve some data
             
             // hydrate model with data from data source
             var result = new OrcaLookupResult(){

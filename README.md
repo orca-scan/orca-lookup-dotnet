@@ -21,6 +21,60 @@ cd orca-lookup-dotnet
 dotnet restore
 ```
 
+## Usage
+
+For an example of how to do this, see [OrcaLookupController.cs](/Controllers/OrcaLookupController.cs)
+
+```csharp
+[HttpGet]
+public IActionResult Get()
+{
+    // get the incoming barcode sent from Orca Scan (scanned by a user)
+    string barcode = HttpContext.Request.Query["barcode"].ToString();
+
+    // TODO: query a database or API to retrieve some data
+
+    // hydrate model with data from data source
+    var result = new OrcaLookupResult(){
+        Vin = "4S3BMHB68B3286050",
+        Make = "SUBARU",
+        Model = "SUBARU",
+        ManufacturerName = "FUJI HEAVY INDUSTRIES U.S.A",
+        VehicleType = "PASSENGER CAR",
+        Year = 1992
+    };
+
+    // return data to Orca as a JSON object (JSON property names must match orca sheet column names!)
+    return new JsonResult(result);
+}
+```
+
+[OrcaLookupResult](/Controllers/OrcaLookupController.cs) is an example model of how to return data to Orca Scan. Orca expects the data in JSON format such that the JSON property names match the Orca column names.
+
+```csharp
+// IMPORTANT: Model must mimics the structure of an Orca Sheet when serialised
+private class OrcaLookupResult {
+
+    [JsonPropertyName("VIN")]
+    public string Vin { get; set; }
+
+    [JsonPropertyName("Make")]
+    public string Make { get; set; }
+
+    [JsonPropertyName("Model")]
+    public string Model { get; set; }
+
+    [JsonPropertyName("Manufacturer Name")]
+    public string ManufacturerName { get; set; }
+
+    [JsonPropertyName("Vehicle Type")]
+    public string VehicleType { get; set; }
+
+    [JsonPropertyName("Year")]
+    public int Year { get; set; }
+}
+```
+
 ## Run
 
 ```bash
