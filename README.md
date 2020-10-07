@@ -1,6 +1,12 @@
 # orca-lookup-dotnet
 
-Quick example of how to respond to an [Orca Lookup URL](https://orcascan.com/docs/api/lookup-url) request in C# AspNetCore.
+An Orca Scan Lookup URL is the easiest way to connect Orca Scan to your data.
+
+Each time a user scans a barcode from the Orca Scan mobile app, Orca will send a request to the endpoint that you provide and pass the barcode value as a Query String `?barcode=0123456`.
+
+You can use the barcode value to query your database and return data to the Orca Scan mobile app.
+
+This project is a quick example of how to accept and respond to an [Orca Lookup URL](https://orcascan.com/docs/api/lookup-url) request in C# AspNetCore.
 
 ## Install
 
