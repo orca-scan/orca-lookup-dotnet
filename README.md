@@ -21,7 +21,14 @@ cd orca-lookup-dotnet
 dotnet restore
 ```
 
-## Usage
+## Run
+
+```bash
+# start the project
+dotnet run
+```
+
+## How it works
 
 [OrcaLookupController](/Controllers/OrcaLookupController.cs) is an example of how to process an incoming request:
 
@@ -73,13 +80,6 @@ public class OrcaLookupModel {
     [JsonPropertyName("Year")]
     public int Year { get; set; }
 }
-```
-
-## Run
-
-```bash
-# start the project
-dotnet run
 ```
 
 Open your browser at [http://localhost:5001](http://localhost:5001) to interact with the controller.
