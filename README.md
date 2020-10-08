@@ -10,6 +10,8 @@ This project is a quick example of how to accept and respond to a [Barcode Looku
 
 ## Install
 
+First ensure you have [.NET Core 3.1](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/install) installed. Then execute the following:
+
 ```bash
 # download this example code
 git clone https://github.com/orca-scan/orca-lookup-dotnet.git
