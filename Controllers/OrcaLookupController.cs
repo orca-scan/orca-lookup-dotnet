@@ -22,7 +22,7 @@ namespace OrcaLookupDotNet.Controllers
             var result = new OrcaLookupModel(){
                 Vin = barcode,
                 Make = "SUBARU",
-                Model = "SUBARU",
+                Model = "Legacy",
                 ManufacturerName = "FUJI HEAVY INDUSTRIES U.S.A",
                 VehicleType = "PASSENGER CAR",
                 Year = 1992

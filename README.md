@@ -43,7 +43,7 @@ Open your browser at [http://localhost:5000?barcode=4S3BMHB68B3286050](http://lo
 {
     "VIN": "4S3BMHB68B3286050",
     "Make": "SUBARU",
-    "Model": "SUBARU",
+    "Model": "Legacy",
     "Manufacturer Name": "FUJI HEAVY INDUSTRIES U.S.A",
     "Vehicle Type": "PASSENGER CAR",
     "Year": 1992
@@ -67,7 +67,7 @@ public IActionResult Get()
     var result = new OrcaLookupModel(){
         Vin = barcode,
         Make = "SUBARU",
-        Model = "SUBARU",
+        Model = "Legacy",
         ManufacturerName = "FUJI HEAVY INDUSTRIES U.S.A",
         VehicleType = "PASSENGER CAR",
         Year = 1992
