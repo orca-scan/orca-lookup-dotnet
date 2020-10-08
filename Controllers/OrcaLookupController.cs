@@ -20,7 +20,7 @@ namespace OrcaLookupDotNet.Controllers
             
             // hydrate model with data from data source
             var result = new OrcaLookupModel(){
-                Vin = "4S3BMHB68B3286050",
+                Vin = barcode,
                 Make = "SUBARU",
                 Model = "SUBARU",
                 ManufacturerName = "FUJI HEAVY INDUSTRIES U.S.A",

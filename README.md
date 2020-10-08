@@ -37,7 +37,7 @@ dotnet restore
 dotnet run
 ```
 
-Open your browser at [http://localhost:5000](http://localhost:5000) and you should see the following:
+Open your browser at [http://localhost:5000?barcode=4S3BMHB68B3286050](http://localhost:5000?barcode=4S3BMHB68B3286050) and you should see the following:
 
 ```json
 {
@@ -65,7 +65,7 @@ public IActionResult Get()
 
     // hydrate model with data from data source
     var result = new OrcaLookupModel(){
-        Vin = "4S3BMHB68B3286050",
+        Vin = barcode,
         Make = "SUBARU",
         Model = "SUBARU",
         ManufacturerName = "FUJI HEAVY INDUSTRIES U.S.A",
