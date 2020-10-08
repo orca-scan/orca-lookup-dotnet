@@ -37,7 +37,18 @@ dotnet restore
 dotnet run
 ```
 
-Open your browser at [http://localhost:5001](http://localhost:5001) to interact with the controller.
+Open your browser at [http://localhost:5000](http://localhost:5000) and you should see the following:
+
+```json
+{
+    "VIN": "4S3BMHB68B3286050",
+    "Make": "SUBARU",
+    "Model": "SUBARU",
+    "Manufacturer Name": "FUJI HEAVY INDUSTRIES U.S.A",
+    "Vehicle Type": "PASSENGER CAR",
+    "Year": 1992
+}
+```
 
 ## How it works
 
