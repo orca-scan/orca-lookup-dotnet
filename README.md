@@ -12,7 +12,7 @@ This project is a quick example of how to accept and respond to a [Barcode Looku
 
 ```bash
 # download this example code
-git clone git@github.com:orca-scan/orca-lookup-dotnet.git
+git clone https://github.com/orca-scan/orca-lookup-dotnet.git
 
 # go into the new directory
 cd orca-lookup-dotnet
