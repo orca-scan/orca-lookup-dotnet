@@ -1,8 +1,8 @@
 # orca-lookup-dotnet
 
-This project is a an example of [how to scan barcodes using a smartphone](https://orcascan.com/mobile) and [present a user with data from your system](https://orcascan.com/docs/api/lookup-url) using C# and the ASP.NET core framework.
+This project is a an example of [how to scan barcodes using a smartphone](https://orcascan.com/mobile) and [present a user with data from your system](https://orcascan.com/docs/api/lookup-url) using C# and the [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) framework.
 
-How it works:
+**How it works:**
 
 1. A user [scans a barcode](https://orcascan.com/mobile) using their smartphone
 2. Orca Scan sends a HTTP GET request to your endpoint with `?barcode=value`
@@ -10,7 +10,7 @@ How it works:
 4. Your system returns the data in JSON format with keys matching column names
 5. The [Orca Scan mobile](https://orcascan.com/mobile) app presents that data to the user
 
-*If the Orca mobile user has [update permission](https://orcascan.com/docs/getting-started/adding-users#selecting-user-permissions) and saves the data, it will saved to your Orca Scan sheet and visible in the [History Log](https://orcascan.com/docs/getting-started/history-log#how-audit-trails-work).*
+*If the Orca mobile user has [update permission](https://orcascan.com/docs/getting-started/adding-users#selecting-user-permissions) and saves the data, it will saved to your Orca sheet and visible in the [History Log](https://orcascan.com/docs/getting-started/history-log#how-audit-trails-work).*
 ## Install
 
 First ensure you have [.NET Core 3.1](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/install) installed.
