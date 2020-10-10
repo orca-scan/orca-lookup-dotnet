@@ -82,7 +82,7 @@ public JsonResult Get()
 }
 ```
 
-A [model](/Models/OrcaLookupModel.cs) used to return data to Orca Scan the structure that matches your sheet:
+And a [model](/Models/OrcaLookupModel.cs) used to return data to Orca Scan in a structure that matches your sheet:
 
 ```csharp
 // IMPORTANT: JSON property names must match Orca sheet column names when serialised
