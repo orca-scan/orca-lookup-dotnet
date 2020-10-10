@@ -1,17 +1,16 @@
 # orca-lookup-dotnet
 
-You can use an [Orca Scan Lookup URL](https://orcascan.com/docs/api/lookup-url) to pull data from your system each time a barcode is scanned using the [Orca Scan mobile app](https://orcascan.com/mobile).
+This project is a an example of [how to scan barcodes using a smartphone](https://orcascan.com/mobile) and [present a user with data from your system](https://orcascan.com/docs/api/lookup-url) using C# and the ASP.NET core framework.
 
 How it works:
 
 1. A user [scans a barcode](https://orcascan.com/mobile) using their smartphone
-2. Orca sends a HTTP GET request to your endpoint with `?barcode=value`
-3. Your system queries your database or internal API for a `barcode` match
+2. Orca Scan sends a HTTP GET request to your endpoint with `?barcode=value`
+3. Your system queries a database or internal API for a `barcode` match
 4. Your system returns the data in JSON format with keys matching column names
 5. The [Orca Scan mobile](https://orcascan.com/mobile) app presents that data to the user
 
-This project is a quick example of how to accept and respond to a [Barcode Lookup](https://orcascan.com/docs/api/lookup-url) in C# using [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core).
-
+*If the Orca mobile user has [update permission](https://orcascan.com/docs/getting-started/adding-users#selecting-user-permissions) and saves the data, it will saved to your Orca Scan sheet and visible in the [History Log](https://orcascan.com/docs/getting-started/history-log#how-audit-trails-work).*
 ## Install
 
 First ensure you have [.NET Core 3.1](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/install) installed.
@@ -110,13 +109,10 @@ public class OrcaLookupModel {
 
 ## Troubleshooting
 
-**The current .NET SDK does not support targeting .NET Core 3.1**
+* **The current .NET SDK does not support targeting .NET Core 3.1**
+  This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1), upgrade and try again.
 
-This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1), upgrade and try again.
-
-## Reporting Bugs
-
-If you run into any issues please [raise a bug](https://github.com/orca-scan/orca-lookup-dotnet/issues), so we can document the problem/solution for others.
+If you run into any issues not listed above, please [open a ticket](https://github.com/orca-scan/orca-lookup-dotnet/issues) and we'll get back to you as soon as we can.
 
 ## Contributing
 
