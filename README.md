@@ -11,6 +11,7 @@ This project is a an example of [how to scan barcodes using a smartphone](https:
 5. The [Orca Scan mobile](https://orcascan.com/mobile) app presents that data to the user
 
 *If the Orca mobile user has [update permission](https://orcascan.com/docs/getting-started/adding-users#selecting-user-permissions) and saves the data, it will saved to your Orca sheet and visible in the [History Log](https://orcascan.com/docs/getting-started/history-log#how-audit-trails-work).*
+
 ## Install
 
 First ensure you have [.NET Core 3.1](https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/install) installed.
@@ -109,10 +110,11 @@ public class OrcaLookupModel {
 
 ## Troubleshooting
 
+If you run into any issues not listed here, please [open a ticket](https://github.com/orca-scan/orca-lookup-dotnet/issues) and we'll get back to you as soon as we can.
+
 * **The current .NET SDK does not support targeting .NET Core 3.1**
   This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1), upgrade and try again.
 
-If you run into any issues not listed above, please [open a ticket](https://github.com/orca-scan/orca-lookup-dotnet/issues) and we'll get back to you as soon as we can.
 
 ## Contributing
 
