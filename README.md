@@ -10,7 +10,7 @@ This is a an example of [how to scan barcodes using a smartphone](https://orcasc
 4. Your system returns the data in JSON format with keys matching column names
 5. The [Orca Scan mobile](https://orcascan.com/mobile) app presents that data to the user
 
-*If the Orca mobile user has [update permission](https://orcascan.com/docs/getting-started/adding-users#selecting-user-permissions) and saves the data, it will saved to your Orca sheet and visible in the [History Log](https://orcascan.com/docs/getting-started/history-log#how-audit-trails-work).*
+*If the mobile user has [update permission](https://orcascan.com/docs/getting-started/adding-users#selecting-user-permissions) and saves the data, it will saved to your Orca sheet.*
 
 ## Install
 
