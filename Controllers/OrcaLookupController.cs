@@ -11,7 +11,7 @@ namespace OrcaLookupDotNet.Controllers
     {
 
         [HttpGet]
-        public IActionResult Get()
+        public JsonResult Get()
         {
             // get the incoming barcode sent from Orca Scan (scanned by a user)
             string barcode = HttpContext.Request.Query["barcode"].ToString();

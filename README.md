@@ -56,7 +56,7 @@ Open your browser at [http://localhost:5000?barcode=4S3BMHB68B3286050](http://lo
 
 ```csharp
 [HttpGet]
-public IActionResult Get()
+public JsonResult Get()
 {
     // get the incoming barcode sent from Orca Scan (scanned by a user)
     string barcode = HttpContext.Request.Query["barcode"].ToString();
