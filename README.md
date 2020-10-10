@@ -1,6 +1,6 @@
 # orca-lookup-dotnet
 
-This project is a an example of [how to scan barcodes using a smartphone](https://orcascan.com/mobile) and [present a user with data from your system](https://orcascan.com/docs/api/lookup-url) using C# and the [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) framework.
+This is a an example of [how to scan barcodes using a smartphone](https://orcascan.com/mobile) and [present data from your system](https://orcascan.com/docs/api/lookup-url) using C# and the [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) framework.
 
 **How it works:**
 
