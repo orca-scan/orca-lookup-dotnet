@@ -1,12 +1,16 @@
 # orca-lookup-dotnet
 
-An [Orca Scan Lookup URL](https://orcascan.com/docs/api/lookup-url) is the easiest way to connect Orca Scan to your data.
+You can use an [Orca Scan Lookup URL](https://orcascan.com/docs/api/lookup-url) to pull data from your system each time a barcode is scanned using the [Orca Scan mobile app](https://orcascan.com/mobile).
 
-Each time a user scans a barcode using the [Orca Scan mobile app](https://orcascan.com/mobile), Orca will send a request to the [endpoint you provided](https://orcascan.com/docs/api/lookup-url#add-your-lookup-url) and pass the barcode value as a Query String `?barcode=0123456`.
+How it works:
 
-You can use the barcode value to query your database and return data to the Orca Scan mobile app.
+1. A user [scans a barcode](https://orcascan.com/mobile) using their smartphone
+2. Orca sends a HTTP GET request to your endpoint with `?barcode=value`
+3. Your system queries your database or internal API for a `barcode` match
+4. Your system returns the data in JSON format with keys matching column names
+5. The [Orca Scan mobile](https://orcascan.com/mobile) app presents that data to the user
 
-This project is a quick example of how to accept and respond to a [Barcode Lookup](https://orcascan.com/docs/api/lookup-url) request in C# using [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core).
+This project is a quick example of how to accept and respond to a [Barcode Lookup](https://orcascan.com/docs/api/lookup-url) in C# using [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core).
 
 ## Install
 
@@ -37,7 +41,7 @@ dotnet restore
 dotnet run
 ```
 
-Open your browser at [http://localhost:5000?barcode=4S3BMHB68B3286050](http://localhost:5000?barcode=4S3BMHB68B3286050) and you should see the following:
+Visit [http://localhost:5000?barcode=4S3BMHB68B3286050](http://localhost:5000?barcode=4S3BMHB68B3286050) to see the following:
 
 ```json
 {
@@ -50,9 +54,9 @@ Open your browser at [http://localhost:5000?barcode=4S3BMHB68B3286050](http://lo
 }
 ```
 
-## How it works
+## How this example works
 
-[OrcaLookupController](/Controllers/OrcaLookupController.cs) is an example of how to process an incoming request:
+This project is broken into two parts a [controller](/Controllers/OrcaLookupController.cs) to handle the incoming request:
 
 ```csharp
 [HttpGet]
@@ -78,7 +82,7 @@ public JsonResult Get()
 }
 ```
 
-[OrcaLookupModel](/Models/OrcaLookupModel.cs) is an example model used to respond to a lookup request:
+A [model](/Models/OrcaLookupModel.cs) used to return data to Orca Scan the structure that matches your sheet:
 
 ```csharp
 // IMPORTANT: JSON property names must match Orca sheet column names when serialised
@@ -112,11 +116,11 @@ This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-c
 
 ## Reporting Bugs
 
-Please raise bugs using the [issue tracker](https://github.com/orca-scan/orca-lookup-dotnet/issues), please provide enough information to allow the bug to be reproduced. You will be notified via GitHub once we resolve the issue.
+If you run into any issues please [raise a bug](https://github.com/orca-scan/orca-lookup-dotnet/issues), so we can document the problem/solution for others.
 
 ## Contributing
 
-Feel free to contribute, either by [raising an issue](https://github.com/orca-scan/orca-lookup-dotnet/issues) or:
+To contribute simply:
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
