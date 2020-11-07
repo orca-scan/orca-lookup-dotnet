@@ -18,7 +18,7 @@ namespace OrcaLookupDotNet.Controllers
 
             // TODO: query a database or API to retrieve some data
             
-            // hydrate model with data from data source
+            // hydrate model (property names must match column names when serialised)
             var result = new OrcaLookupModel(){
                 Vin = barcode,
                 Make = "SUBARU",
