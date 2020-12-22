@@ -115,16 +115,12 @@ If you run into any issues not listed here, please [open a ticket](https://githu
 * **The current .NET SDK does not support targeting .NET Core 3.1**
   This example uses [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1), upgrade and try again.
 
-
-## Contributing
-
-To contribute simply:
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
+## Examples in other langauges
+* [orca-lookup-node](https://github.com/orca-scan/orca-lookup-node)
+* [orca-lookup-go](https://github.com/orca-scan/orca-lookup-go)
+* [orca-lookup-python](https://github.com/orca-scan/orca-lookup-python)
+* [orca-lookup-php](https://github.com/orca-scan/orca-lookup-php)
+* [orca-lookup-java](https://github.com/orca-scan/orca-lookup-java)
 
 ## History
 
